@@ -1,10 +1,17 @@
+import java.util.*;
+import java.io.*;
+
+
 public class Foo{
-    
-    public Foo(int a){
-	System.out.println("Inside Foo constructor");
+ 
+    public void read(){
+	String s = IO.readString();
+	System.out.println("wow"+s);
     }
 
-    public void printMe(){
-	System.out.println("I am in Foo!");
+    
+    public static void main(String[] args){
+	Foo f = new Foo();
+	f.read();
     }
 }
