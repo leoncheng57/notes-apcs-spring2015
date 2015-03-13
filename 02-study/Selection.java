@@ -15,13 +15,13 @@ public class Selection{
     }
 
     public int select(int[] L,int k, int SI, int EI){
-	System.out.println("now finding the" +k+"element...");
+	System.out.println("now finding the " +k+" element...");
 	int pivot=L[EI];
 	int low = SI;
 	int high = EI;
 	int highVal,lowVal;
 	while (low<high){
-	    if (L[low]<<pivot){
+	    if (L[low]<pivot){
 		low++;
 	    }else{
 		high--;
@@ -42,18 +42,18 @@ public class Selection{
 	}
     }
 
-    public void select(int k){
-	select(L,k,0,L.length);
+    public int select(int k){
+    	return select(L,k,0,L.length-1);
     }
     
     public static void main(String[] args){
-	int[] L = new int[10];
-	Random r = new Random();
-	for (int i = 0 ; i<L.length; i++){
-	    L[i]=r.nextInt(100);
-	}
-	Selection s = new Selection(L);
-	System.out.println(s.select(4));
+    	int[] L = new int[10];
+    	Random r = new Random();
+    	for (int i = 0 ; i<L.length; i++){
+    	    L[i]=r.nextInt(100);
+    	}
+    	Selection s = new Selection(L);
+    	System.out.println(s.select(4));
     }
 
 }
