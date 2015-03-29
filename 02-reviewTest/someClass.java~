@@ -1,0 +1,7 @@
+public class someClass extends Aclass{
+
+    public void foo(){
+	System.out.println("inside foo");
+    }
+
+}

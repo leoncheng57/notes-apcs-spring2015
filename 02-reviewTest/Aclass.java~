@@ -1,0 +1,4 @@
+public abstract class Acalss{
+    private int v1;
+    private double v2;
+}
